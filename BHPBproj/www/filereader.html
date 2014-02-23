@@ -1,0 +1,59 @@
+<!-- i-C-a -->
+<div data-role="page" id="filereader" class="succeedingpage">
+  <script src="js/functions.js"></script>
+  
+  <div class="pageslogo"></div>
+  <div id="ambot">
+  </div>
+    <h1>Example</h1>
+    <p>Read File</p>
+  <script>
+    $("#filereader").on("pageshow", function(event){
+      //navigator.notification.alert("malipayong pag-abot");
+      window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
+    });
+    
+    function gotFS(fileSystem) {
+      //navigator.notification.alert("sulod sa gotfs");
+      fileSystem.root.getFile("access.txt", {create:true, exclusive:false}, gotFileEntry, failure);
+    }
+  
+    function gotFileEntry(fileEntry) {
+      //navigator.notification.alert("sulod sa gotfileentry");
+      fileEntry.file(gotFile, fail);
+    }
+
+    function gotFile(file){
+      readDataUrl(file);
+      readAsText(file);
+    }
+
+    function readDataUrl(file) {
+      var reader = new FileReader();
+      reader.onloadend = function(evt) {
+          console.log("Read as data URL");
+          console.log(evt.target.result);
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function readAsText(file) {
+      var reader = new FileReader();
+      reader.onloadend = function(evt) {
+        console.log("Read as text");
+        console.log(evt.target.result);
+      };
+      reader.readAsText(file);
+    }
+
+    function fail(evt) {
+      //console.log(evt.target.error.code);
+      //navigator.notification.alert("palpak");
+    }
+  
+    function failure(evt) {
+      //navigator.notification.alert("dili makita ang file sa "+fileSystem.root.name);
+      navigator.notification.alert("dili makita ang file sa ");
+    }
+  </script>
+</div>

@@ -1,0 +1,80 @@
+<!-- i-C-a -->
+<div data-role="page" id="updatespage" class="succeedingpage">
+  <script src="js/functions.js"></script>
+  <div id="refreshbtn"></div>
+  <div class="pageslogo"></div>
+  <div class="pagetitle">
+    <br>
+    <h2>Updates</h2>
+  </div>
+  <div class="backtohome"></div>
+  <div class="vspacer-line" style="margin: 10px 0;"></div>
+ 
+  <div class="contentholder">
+    <div class="updatescontainer">
+      <h3>BHPBIO Reliability Technology Study Tour</h3>
+      <p>
+        Please click on the refresh icon on the top left corner of this page. The purpose 
+        of this button is to download all the documents within this Application. This will 
+        allow you to access all the reading materials at your convenience without an 
+        internet connection. Enjoy! 
+      </p>
+      <div class="updatesbreaker"></div>
+      
+    </div>
+  </div><!--end of contentholder-->
+  
+  <div class="bottommenu">
+    <div class="homebtn"></div>
+    <div class="menubtnscontainer">
+      <div class="bottomicons" id="menuday1"><img src="css/images/day1icn.png"><br>Day 1</div>
+      <div class="bottomicons" id="menuday2"><img src="css/images/day2icn.png"><br>Day 2</div>
+      <div class="bottomicons" id="menuday3"><img src="css/images/day3icn.png"><br>Day 3</div>
+      <div class="bottomicons" id="menuday4"><img src="css/images/day4icn.png"><br>Day 4</div>
+      <div class="bottomicons" id="menumaterials"><img src="css/images/homeicn.png"><br>Home</div>
+    </div>
+  </div>
+  
+  <div data-role="popup" id="preloadingFiles" data-dismissible="false" data-position-to="window" data-overlay-theme="a" 
+      style="text-align:center;width:300px;height:105px;background:#FFFFFF;padding-top:25px;">
+    <img src="css/images/loadingImg.gif"><br>
+    Downloading Files
+    <div><span id="percentagecomplete"></span>%<div>
+  </div>
+  
+  <script>
+    $("#updatespage").on("pageshow", function(event) {
+      $("#preloadingFiles").popup();
+      
+      if(window.innerHeight > window.innerWidth) {
+        $("#updatespage").removeClass("landscaped");
+        $(".bottommenu").css("top","996px");
+        $(".pageslogo").css("top","120px");
+        $(".pagetitle").css("top","113px");
+      } else {
+        $("#updatespage").addClass("landscaped");
+        $(".bottommenu").css("top","740px");
+        $(".pageslogo").css("top","170px");
+        $(".pagetitle").css("top","130px");
+      }
+    });
+    
+    $( window ).on( "orientationchange", function( event ) {
+      //navigator.notification.alert( "This device is in " + event.orientation + " mode!" );
+      switch(event.orientation) {
+        case "portrait":
+          $("#updatespage").removeClass("landscaped");
+          $(".bottommenu").css("top","996px");
+          $(".pageslogo").css("top","120px");
+          $(".pagetitle").css("top","113px");
+          break;
+        case "landscape":
+          $("#updatespage").addClass("landscaped");
+          $(".bottommenu").css("top","740px");
+          $(".pageslogo").css("top","170px");
+          $(".pagetitle").css("top","130px");
+          break;
+      }
+    });
+  </script>
+</div>

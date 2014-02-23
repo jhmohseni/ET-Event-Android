@@ -1,0 +1,323 @@
+<!-- i-C-a -->
+<div data-role="page" id="attendees" class="succeedingpage">
+  <script src="js/functions.js"></script>
+  
+  <div class="pageslogo"></div>
+  <div class="pagetitle">
+    <br>
+    <h2>Attendees</h2>
+  </div>
+  <div class="backtohome"></div>
+  <div class="vspacer-line" style="margin: 10px 0;"></div>
+ 
+  <div class="contentholder">
+    <div class="attendeescontainer">
+      <!--<div class="attendee"><a href="#" id="AllanCooper" class="attendeesprof"><img src="css/images/AllanCooper.png"></div>
+      <div class="attendee"><a href="#" id="AmberMorgan" class="attendeesprof"><img src="css/images/AmberMorgan.png"></div>
+      <div class="attendee"><a href="#" id="ArtKoehler" class="attendeesprof"><img src="css/images/ArtKoehler.png"></div>
+      <div class="attendee"><a href="#" id="ChrisJordan" class="attendeesprof"><img src="css/images/ChrisJordan.png"></div>
+      <div class="attendee"><a href="#" id="DavidKelso" class="attendeesprof"><img src="css/images/DavidKelso.png"></div>
+      <div class="attendee"><a href="#" id="GerhardCarstens" class="attendeesprof"><img src="css/images/GerhardCarstens.png"></div>
+      <div class="attendee"><a href="#" id="JerrySchonhoft" class="attendeesprof"><img src="css/images/JerrySchonhoft.png"></div>
+      <div class="attendee"><a href="#" id="JimmyWilson" class="attendeesprof"><img src="css/images/JimmyWilson.png"></div>
+      <div class="attendee"><a href="#" id="LinYang" class="attendeesprof"><img src="css/images/LinYang.png"></div>
+      <div class="attendee"><a href="#" id="MarkPeterson" class="attendeesprof"><img src="css/images/MarkPeterson.png"></div>
+      <div class="attendee"><a href="#" id="MarkoStojanovic" class="attendeesprof"><img src="css/images/MarkoStojanovic.png"></div>
+      <div class="attendee"><a href="#" id="MichaelMikeGreyling" class="attendeesprof"><img src="css/images/MichaelMikeGreyling.png"></div>
+      <div class="attendee"><a href="#" id="MichaelBailey" class="attendeesprof"><img src="css/images/MichaelBailey.png"></div>
+      <div class="attendee"><a href="#" id="MorganMalone" class="attendeesprof"><img src="css/images/MorganMalone.png"></div>
+      <div class="attendee"><a href="#" id="NateStrong" class="attendeesprof"><img src="css/images/NateStrong.png"></div>
+      <div class="attendee"><a href="#" id="RagUdd" class="attendeesprof"><img src="css/images/RagUdd.png"></div>
+      <div class="attendee"><a href="#" id="RobTelford" class="attendeesprof"><img src="css/images/RobTelford.png"></div>
+      <div class="attendee"><a href="#" id="RyanHair" class="attendeesprof"><img src="css/images/RyanHair.png"></div>
+      <div class="attendee"><a href="#" id="StanBrown" class="attendeesprof"><img src="css/images/StanBrown.png"></div>
+      <div class="attendee"><a href="#" id="ThomasHughes" class="attendeesprof"><img src="css/images/ThomasHughes.png"></div>
+      <div class="attendee" style="margin-left:12%;"><a href="#" id="TomLange" class="attendeesprof"><img src="css/images/TomLange.png"></div>
+      <div class="attendee"><a href="#" id="TonyOttaviano" class="attendeesprof"><img src="css/images/TonyOttaviano.png"></div>
+      <div class="attendee"><a href="#" id="WimHoogedeure" class="attendeesprof"><img src="css/images/WimHoogedeure.png"></div>-->
+      
+       <ul data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+        <li class="ui-first-child"><a id="AllanCooper" href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r attendeesprof"><img src="css/images/AllanCooper.png" height="76"><span>Allan Cooper</span></a></li>
+        <li class="ui-li-has-count"><a id="AmberMorgan" href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r attendeesprof"><img src="css/images/AmberMorgan.png" height="76"><span>Amber Morgan</span></a></li>
+        <li class="ui-li-has-count"><a id="ArtKoehler" href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r attendeesprof"><img src="css/images/ArtKoehler.png" height="76"><span>Art Koehler</span></a></li>
+        <li class="ui-li-has-count"><a id="ChrisJordan" href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r attendeesprof"><img src="css/images/ChrisJordan.png" height="76"><span>Chris Jordan</span></a></li>
+        <li class="ui-li-has-count"><a id="DavidKelso" href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r attendeesprof"><img src="css/images/DavidKelso.png" height="76"><span>David Kelso</span></a></li>
+        <li class="ui-li-has-count"><a id="GerhardCarstens" href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r attendeesprof"><img src="css/images/GerhardCarstens.png" height="76"><span>Gerhard Carstens</span></a></li>
+        <li class="ui-li-has-count"><a id="JerrySchonhoft" href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r attendeesprof"><img src="css/images/JerrySchonhoft.png" height="76"><span>Jerry Schonhoft</span></a></li>
+        <li class="ui-li-has-count"><a id="JimmyWilson" href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r attendeesprof"><img src="css/images/JimmyWilson.png" height="76"><span>Jimmy Wilson</span></a></li>
+        <li class="ui-li-has-count"><a id="LinYang" href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r attendeesprof"><img src="css/images/LinYang.png" height="76"><span>Lin Yang</span></a></li>
+        <li class="ui-li-has-count"><a id="MarkPeterson" href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r attendeesprof"><img src="css/images/MarkPeterson.png" height="76"><span>Mark Peterson</span></a></li>
+        <li class="ui-li-has-count"><a id="MarkoStojanovic" href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r attendeesprof"><img src="css/images/MarkoStojanovic.png" height="76"><span>Marko Stojanovic</span></a></li>
+        <li class="ui-li-has-count"><a id="MichaelBailey" href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r attendeesprof"><img src="css/images/MichaelBailey.png" height="76"><span>Michael Bailey</span></a></li>
+        <li class="ui-li-has-count"><a id="MichaelMikeGreyling" href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r attendeesprof"><img src="css/images/MichaelMikeGreyling.png" height="76"><span>Michael (Mike) Greyling</span></a></li>
+        <li class="ui-li-has-count"><a id="MorganMalone" href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r attendeesprof"><img src="css/images/MorganMalone.png" height="76"><span>Morgan Malone</span></a></li>
+        <li class="ui-li-has-count"><a id="NateStrong" href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r attendeesprof"><img src="css/images/NateStrong.png" height="76"><span>Nate Strong</span></a></li>
+        <li class="ui-li-has-count"><a id="RagUdd" href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r attendeesprof"><img src="css/images/RagUdd.png" height="76"><span>Rag Udd</span></a></li>
+        <li class="ui-li-has-count"><a id="RobTelford" href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r attendeesprof"><img src="css/images/RobTelford.png" height="76"><span>Rob Telford</span></a></li>
+        <li class="ui-li-has-count"><a id="RyanHair" href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r attendeesprof"><img src="css/images/RyanHair.png" height="76"><span>Ryan Hair</span></a></li>
+        <li class="ui-li-has-count"><a id="StanBrown" href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r attendeesprof"><img src="css/images/StanBrown.png" height="76"><span>Stan Brown</span></a></li>
+        <li class="ui-li-has-count"><a id="ThomasHughes" href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r attendeesprof"><img src="css/images/ThomasHughes.png" height="76"><span>Thomas Hughes</span></a></li>
+        <li class="ui-li-has-count"><a id="TomLange" href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r attendeesprof"><img src="css/images/TomLange.png" height="76"><span>Tom Lange</span></a></li>
+        <li class="ui-li-has-count"><a id="TonyOttaviano" href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r attendeesprof"><img src="css/images/TonyOttaviano.png" height="76"><span>Tony Ottaviano</span></a></li>
+        <li class="ui-last-child"><a id="WimHoogedeure" href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r attendeesprof"><img src="css/images/WimHoogedeure.png" height="76"><span>Wim Hoogedeure</span></a></li>
+      </ul>
+    </div>
+  </div><!--end of contentholder-->
+  
+  <div class="bottommenu">
+    <div class="homebtn"></div>
+    <div class="menubtnscontainer">
+      <div class="bottomicons" id="menuday1"><img src="css/images/day1icn.png"><br>Day 1</div>
+      <div class="bottomicons" id="menuday2"><img src="css/images/day2icn.png"><br>Day 2</div>
+      <div class="bottomicons" id="menuday3"><img src="css/images/day3icn.png"><br>Day 3</div>
+      <div class="bottomicons" id="menuday4"><img src="css/images/day4icn.png"><br>Day 4</div>
+      <div class="bottomicons" id="menumaterials"><img src="css/images/homeicn.png"><br>Home</div>
+    </div>
+  </div>
+  
+  <div data-role="popup"  class="singleDownload" data-dismissible="false" data-position-to="window" data-overlay-theme="a" 
+      style="text-align:center;width:300px;height:120px;background:#FFFFFF;padding-top:40px;">
+    <img src="css/images/loadingImg.gif"><br>
+    Downloading File
+  </div>
+  
+  <script>
+    $("#attendees").on("pageshow", function(event) {
+      $(".singleDownload").popup();
+      
+      if(window.innerHeight > window.innerWidth) {
+        $("#attendees").removeClass("landscaped");
+        $(".bottommenu").css("top","996px");
+        $(".pageslogo").css("top","120px");
+        $(".pagetitle").css("top","113px");
+        $(".backtohome").css("top","40px");
+        $(".attendeescontainer").css("max-height","710px");
+      } else {
+        $("#attendees").addClass("landscaped");
+        $(".bottommenu").css("top","740px");
+        $(".pageslogo").css("top","170px");
+        $(".pagetitle").css("top","130px");
+        $(".backtohome").css("top","80px");
+        $(".attendeescontainer").css("max-height","460px");
+      }
+    });
+    
+    $(".attendeesprof").on('tap', function() {
+      event.stopPropagation();
+      $(this).removeClass("attendeesprof");
+      var attendeeId = $(this).attr("id");
+      switch(attendeeId) {
+        case "AmberMorgan":
+          var attendeeURL = window.localStorage.getItem("fileaddressofAmberMorgan");
+          if(attendeeURL == null) {
+            downloadFile("AmberMorgan", "attendees");
+          } else {
+            window.open(attendeeURL, "toolbar=yes", '_system', "EnableViewPortScale=yes");
+          }
+          break;
+        case "ThomasHughes":
+          var attendeeURL = window.localStorage.getItem("fileaddressofThomasHughes");
+          if(attendeeURL == null) {
+            downloadFile("ThomasHughes", "attendees");
+          } else {
+            window.open(attendeeURL, "toolbar=yes", '_system', "EnableViewPortScale=yes");
+          }
+          break;
+        case "ArtKoehler":
+          var attendeeURL = window.localStorage.getItem("fileaddressofArtKoehler");
+          if(attendeeURL == null) {
+            downloadFile("ArtKoehler", "attendees");
+          } else {
+            window.open(attendeeURL, "toolbar=yes", '_system', "EnableViewPortScale=yes");
+          }
+          break;
+        case "ChrisJordan":
+          var attendeeURL = window.localStorage.getItem("fileaddressofChrisJordan");
+          if(attendeeURL == null) {
+            downloadFile("ChrisJordan", "attendees");
+          } else {
+            window.open(attendeeURL, "toolbar=yes", '_system', "EnableViewPortScale=yes");
+          }
+          break;
+        case "JerrySchonhoft":
+          var attendeeURL = window.localStorage.getItem("fileaddressofJerrySchonhoft");
+          if(attendeeURL == null) {
+            downloadFile("JerrySchonhoft", "attendees");
+          } else {
+            window.open(attendeeURL, "toolbar=yes", '_system', "EnableViewPortScale=yes");
+          }
+          break;
+        case "LinYang":
+          var attendeeURL = window.localStorage.getItem("fileaddressofLinYang");
+          if(attendeeURL == null) {
+            downloadFile("LinYang", "attendees");
+          } else {
+            window.open(attendeeURL, "toolbar=yes", '_system', "EnableViewPortScale=yes");
+          }
+          break;
+        case "MarkoStojanovic":
+          var attendeeURL = window.localStorage.getItem("fileaddressofMarkoStojanovic");
+          if(attendeeURL == null) {
+            downloadFile("MarkoStojanovic", "attendees");
+          } else {
+            window.open(attendeeURL, "toolbar=yes", '_system', "EnableViewPortScale=yes");
+          }
+          break;
+        case "MarkPeterson":
+          var attendeeURL = window.localStorage.getItem("fileaddressofMarkPeterson");
+          if(attendeeURL == null) {
+            downloadFile("MarkPeterson", "attendees");
+          } else {
+            window.open(attendeeURL, "toolbar=yes", '_system', "EnableViewPortScale=yes");
+          }
+          break;
+        case "MorganMalone":
+          var attendeeURL = window.localStorage.getItem("fileaddressofMorganMalone");
+          if(attendeeURL == null) {
+            downloadFile("MorganMalone", "attendees");
+          } else {
+            window.open(attendeeURL, "toolbar=yes", '_system', "EnableViewPortScale=yes");
+          }
+          break;
+        case "NateStrong":
+          var attendeeURL = window.localStorage.getItem("fileaddressofNateStrong");
+          if(attendeeURL == null) {
+            downloadFile("NateStrong", "attendees");
+          } else {
+            window.open(attendeeURL, "toolbar=yes", '_system', "EnableViewPortScale=yes");
+          }
+          break;
+        case "StanBrown":
+          var attendeeURL = window.localStorage.getItem("fileaddressofStanBrown");
+          if(attendeeURL == null) {
+            downloadFile("StanBrown", "attendees");
+          } else {
+            window.open(attendeeURL, "toolbar=yes", '_system', "EnableViewPortScale=yes");
+          }
+          break;
+        case "WimHoogedeure":
+          var attendeeURL = window.localStorage.getItem("fileaddressofWimHoogedeure");
+          if(attendeeURL == null) {
+            downloadFile("WimHoogedeure", "attendees");
+          } else {
+            window.open(attendeeURL, "toolbar=yes", '_system', "EnableViewPortScale=yes");
+          }
+          break;
+        case "AllanCooper":
+          var attendeeURL = window.localStorage.getItem("fileaddressofAllanCooper");
+          if(attendeeURL == null) {
+            downloadFile("AllanCooper", "attendees");
+          } else {
+            window.open(attendeeURL, "toolbar=yes", '_system', "EnableViewPortScale=yes");
+          }
+          break;
+        case "DavidKelso":
+          var attendeeURL = window.localStorage.getItem("fileaddressofDavidKelso");
+          if(attendeeURL == null) {
+            downloadFile("DavidKelso", "attendees");
+          } else {
+            window.open(attendeeURL, "toolbar=yes", '_system', "EnableViewPortScale=yes");
+          }
+          break;
+        case "GerhardCarstens":
+          var attendeeURL = window.localStorage.getItem("fileaddressofGerhardCarstens");
+          if(attendeeURL == null) {
+            downloadFile("GerhardCarstens", "attendees");
+          } else {
+            window.open(attendeeURL, "toolbar=yes", '_system', "EnableViewPortScale=yes");
+          }
+          break;
+        case "JimmyWilson":
+          var attendeeURL = window.localStorage.getItem("fileaddressofJimmyWilson");
+          if(attendeeURL == null) {
+            downloadFile("JimmyWilson", "attendees");
+          } else {
+            window.open(attendeeURL, "toolbar=yes", '_system', "EnableViewPortScale=yes");
+          }
+          break;
+        case "MichaelBailey":
+          var attendeeURL = window.localStorage.getItem("fileaddressofMichaelBailey");
+          if(attendeeURL == null) {
+            downloadFile("MichaelBailey", "attendees");
+          } else {
+            window.open(attendeeURL, "toolbar=yes", '_system', "EnableViewPortScale=yes");
+          }
+          break;
+        case "MichaelMikeGreyling":
+          var attendeeURL = window.localStorage.getItem("fileaddressofMichaelMikeGreyling");
+          if(attendeeURL == null) {
+            downloadFile("MichaelMikeGreyling", "attendees");
+          } else {
+            window.open(attendeeURL, "toolbar=yes", '_system', "EnableViewPortScale=yes");
+          }
+          break;
+        case "RagUdd":
+          var attendeeURL = window.localStorage.getItem("fileaddressofRagUdd");
+          if(attendeeURL == null) {
+            downloadFile("RagUdd", "attendees");
+          } else {
+            window.open(attendeeURL, "toolbar=yes", '_system', "EnableViewPortScale=yes");
+          }
+          break;
+        case "RobTelford":
+          var attendeeURL = window.localStorage.getItem("fileaddressofRobTelford");
+          if(attendeeURL == null) {
+            downloadFile("RobTelford", "attendees");
+          } else {
+            window.open(attendeeURL, "toolbar=yes", '_system', "EnableViewPortScale=yes");
+          }
+          break;
+        case "RyanHair":
+          var attendeeURL = window.localStorage.getItem("fileaddressofRyanHair");
+          if(attendeeURL == null) {
+            downloadFile("RyanHair", "attendees");
+          } else {
+            window.open(attendeeURL, "toolbar=yes", '_system', "EnableViewPortScale=yes");
+          }
+          break;
+        case "TomLange":
+          var attendeeURL = window.localStorage.getItem("fileaddressofTomLange");
+          if(attendeeURL == null) {
+            downloadFile("TomLange", "attendees");
+          } else {
+            window.open(attendeeURL, "toolbar=yes", '_system', "EnableViewPortScale=yes");
+          }
+          break;
+        case "TonyOttaviano":
+          var attendeeURL = window.localStorage.getItem("fileaddressofTonyOttaviano");
+          if(attendeeURL == null) {
+            downloadFile("TonyOttaviano", "attendees");
+          } else {
+            window.open(attendeeURL, "toolbar=yes", '_system', "EnableViewPortScale=yes");
+          }
+          break;
+      }
+      setTimeout(function() {
+          $(this).addClass("attendeesprof");
+        }, 1000);
+      return false;
+    });
+    
+    $( window ).on( "orientationchange", function( event ) {
+      //navigator.notification.alert( "This device is in " + event.orientation + " mode!" );
+      switch(event.orientation) {
+        case "portrait":
+          $("#attendees").removeClass("landscaped");
+          $(".bottommenu").css("top","996px");
+          $(".pageslogo").css("top","120px");
+          $(".pagetitle").css("top","113px");
+          $(".backtohome").css("top","40px");
+          $(".attendeescontainer").css("max-height","710px");
+          break;
+        case "landscape":
+          $("#attendees").addClass("landscaped");
+          $(".bottommenu").css("top","740px");
+          $(".pageslogo").css("top","170px");
+          $(".pagetitle").css("top","130px");
+          $(".backtohome").css("top","80px");
+          $(".attendeescontainer").css("max-height","460px");
+          break;
+      }
+    });
+  </script>
+</div>

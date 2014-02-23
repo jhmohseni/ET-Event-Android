@@ -1,0 +1,126 @@
+
+<!-- i-C-a -->
+
+        <div data-role="page" id="homepage">
+          <div id="homeheader">
+            <div id="welcome" style="text-transform:none !important;">Welcome <span id="username" style="color:#ffd700;"></span></div>
+            <div id="indexlogo"></div>
+            <div id="indextitle">
+              BHPBIO RT Study Tour<br>
+              25 - 28 February 2014
+            </div>
+          </div>
+          <div id="indexiconcontainer">
+            <div class="indexicons" id="indexwelcomelink"><img src="css/images/indexwelcomeicn.png"><br>Welcome</div>
+            <div class="indexicons" id="indexattendeeslink"><img src="css/images/indexattendeesicn.png"><br>Attendees</div>
+            <div class="indexicons" id="indexmaterialslink"><img src="css/images/indexmaterialsicn.png"><br>Materials</div>
+            <div class="indexicons" id="indexday1link"><img src="css/images/indexday1icn.png"><br>RT as a Competitive<br>Differentiator</div>
+            <div class="indexicons" id="indexday2link"><img src="css/images/indexday2icn.png"><br>RT Fundamentals &amp;<br>Visit to Envision Center</div>
+            <div class="indexicons" id="indexcontactslink"><img src="css/images/indexcontactsicn.png"><br>Key Contacts</div>
+            <div class="indexicons" id="indexday3link"><img src="css/images/indexday3icn.png"><br>Application at BHPBIO</div>
+            <div class="indexicons" id="indexday4link"><img src="css/images/indexday4icn.png"><br>RT in Practice<br>(Box Elder Plant Visit)</div>
+            <div class="indexicons" id="indexupdateslink"><div id="indexupdateslinkimg"></div>Updates</div>
+          </div>
+       
+        <script>
+          $("#homepage").on("pageshow", function(event) {
+            if(window.innerHeight > window.innerWidth) {
+                $("#homepage").removeClass("landscaped");
+                $(".indexicons").css("margin-top","15px");
+                $(".indexicons").css("height","210px");
+                $("#homeheader").css("height","343px");
+              } else {
+                $("#homepage").addClass("landscaped");
+                $(".indexicons").css("margin-top","0px");
+                $(".indexicons").css("height","180px");
+                $("#homeheader").css("height","243px");
+              }
+            $(".indexlocationslink").unbind("click");
+            var loggedInUser = window.localStorage.getItem("username");
+            if(loggedInUser == null) {
+              $.mobile.changePage("index.html", {transition:"slide"});
+            } else {
+              $("#username").html(loggedInUser);
+            }
+            
+              var version = 2;
+              var latestVersion = 2;
+              //latestVersion = checkVersion();
+              //navigator.notification.alert("this is latest "+latestVersion);
+            
+              if(version == latestVersion || latestVersion == 0) {
+                $("#indexupdateslinkimg").css("background-position", "center top");
+                $(".indexlocationslink").bind("click");
+              } else {
+                $("#indexupdateslinkimg").css("background-position", "center bottom");
+                $(".indexlocationslink").bind("click");
+              }
+          });
+        
+          $(".indexicons").on('tap', function() {
+            event.stopPropagation();
+            $(this).unbind();
+            var iconId = $(this).attr("id");
+            switch(iconId) {
+              case "indexday1link":
+                $.mobile.changePage("day1.html", {transition:"slide"});
+                break;
+              
+              case "indexday2link":
+                $.mobile.changePage("day2.html", {transition:"slide"});
+                break;
+              
+              case "indexday3link":
+                $.mobile.changePage("day3.html", {transition:"slide"});
+                break;
+              
+              case "indexday4link":
+                $.mobile.changePage("day4.html", {transition:"slide"});
+                break;
+                
+              case "indexmaterialslink":
+                $.mobile.changePage("materials.html", {transition:"slide"});
+                break;
+              
+              case "indexattendeeslink":
+                $.mobile.changePage("attendees.html", {transition:"slide"});
+                break;
+                
+              case "indexcontactslink":
+                $.mobile.changePage("contacts.html", {transition:"slide"});
+                break;
+                
+              case "indexlocationslink":
+                $.mobile.changePage("locations.html", {transition:"slide"});
+                break;
+                
+              case "indexupdateslink":
+                $.mobile.changePage("updates.html", {transition:"slide"});
+                break;
+              
+              case "indexwelcomelink":
+                $.mobile.changePage("welcome.html", {transition:"slide"});
+                break;
+            }
+            return false;
+          });
+          $( window ).on( "orientationchange", function( event ) {
+            //navigator.notification.alert( "This device is in " + event.orientation + " mode!" );
+            switch(event.orientation) {
+              case "portrait":
+                $("#homepage").removeClass("landscaped");
+                $(".indexicons").css("margin-top","15px");
+                $(".indexicons").css("height","210px");
+                $("#homeheader").css({"height":"343px"});
+                break;
+              case "landscape":
+                $("#homepage").addClass("landscaped");
+                $(".indexicons").css("margin-top","0px");
+                $(".indexicons").css("height","180px");
+                $("#homeheader").css("height","243px");
+                break;
+            }
+          });
+        </script>
+        <script type="text/javascript" src="js/functions.js"></script>
+      </div><!--end of indexiconcontainer-->

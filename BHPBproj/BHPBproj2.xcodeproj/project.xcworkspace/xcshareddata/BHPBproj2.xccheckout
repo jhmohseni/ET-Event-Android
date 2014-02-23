@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>80CF9986-CE0C-428B-BAE8-18BFA48700B3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>BHPBproj2</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F84CC4E9-811E-4CD2-8412-8CE426844E9A</key>
+		<string>https://github.com/jhmohseni/EYevent.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>BHPBproj/BHPBproj2.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F84CC4E9-811E-4CD2-8412-8CE426844E9A</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jhmohseni/EYevent.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F84CC4E9-811E-4CD2-8412-8CE426844E9A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F84CC4E9-811E-4CD2-8412-8CE426844E9A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>EYevent</string>
+		</dict>
+	</array>
+</dict>
+</plist>

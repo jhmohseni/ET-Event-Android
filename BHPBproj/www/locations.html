@@ -1,0 +1,82 @@
+<!-- i-C-a -->
+<div data-role="page" id="locations" class="succeedingpage">
+  <script src="js/functions.js"></script>
+  
+  <div class="pageslogo"></div>
+  <div class="pagetitle">
+    <br>
+    <h2>Locations &amp; Maps</h2>
+  </div>
+  <div class="backtomaterials"></div>
+  <div class="vspacer-line" style="margin: 10px 0;"></div>
+  <div class="buttonscontainer">
+    <div class="perdaybtns" id="thlday1btn"></div>
+    <div class="perdaybtns" id="thlday2btn"></div>
+    <div class="perdaybtns" id="thlday3btn"></div>
+    <div class="perdaybtns" id="thlday4btn"></div>
+  </div>
+  
+  <div class="contentholder">
+    <div class="thlday1">
+      <div class="locationsdaily"><a href="maps:q=312 Walnut Street, 1900 Scripps Center, Cincinatti, OH 45202"><img src="css/images/indexday1icn.png"><br>Cincinnati<br>EY Office</a></div>
+    </div>
+    
+    <div class="thlday2">
+      <div class="locationsdaily"><a href="maps:q=One Procter & Gamble Plaza, Cincinnati, OH 45202"><img src="css/images/indexday2icn.png"><br>Cincinnati<br>Proctor &amp; Gamble<br>Plaza</a></div>
+      <div class="locationsdaily"><a href="maps:q=Baby Care B, 6280 Center Hill Avenue, Cincinnati, OH 45224"><img src="css/images/indexday2icn.png"><br>Cincinnati<br>Winton Hill Business<br>Centre</a></div>
+    </div>
+    
+    <div class="thlday3">
+      <div class="locationsdaily"><a href="maps:q=Hilton Garden Inn, 2271 South Washington Blvd., Ogden, Utah 84401"><img src="css/images/indexday3icn.png"><br>Hilton Garden<br>Inn</a></div>
+    </div>
+    
+    <div class="thlday4">
+      <div class="locationsdaily"><a href="maps:q=Box Elder Plant, 5000 North 6800 West Bear River City,Utah 84301"><img src="css/images/indexday4icn.png"><br>Box Elder<br>Plant</a></div>
+    </div>
+  </div><!--end of contentholder-->
+  
+  <div class="bottommenu">
+    <div class="homebtn"></div>
+    <div class="menubtnscontainer">
+      <div class="bottomicons" id="menuday1"><img src="css/images/day1icn.png"><br>Day 1</div>
+      <div class="bottomicons" id="menuday2"><img src="css/images/day2icn.png"><br>Day 2</div>
+      <div class="bottomicons" id="menuday3"><img src="css/images/day3icn.png"><br>Day 3</div>
+      <div class="bottomicons" id="menuday4"><img src="css/images/day4icn.png"><br>Day 4</div>
+      <div class="bottomicons" id="menumaterials"><img src="css/images/homeicn.png"><br>Home</div>
+    </div>
+  </div>
+  
+  <script>
+    $("#locations").on("pageshow", function(event) {
+      if(window.innerHeight > window.innerWidth) {
+        $("#locations").removeClass("landscaped");
+        $(".bottommenu").css("top","996px");
+        $(".pageslogo").css("top","120px");
+        $(".pagetitle").css("top","113px");
+      } else {
+        $("#locations").addClass("landscaped");
+        $(".bottommenu").css("top","740px");
+        $(".pageslogo").css("top","170px");
+        $(".pagetitle").css("top","130px");
+      }
+    });
+    
+    $( window ).on( "orientationchange", function( event ) {
+      //navigator.notification.alert( "This device is in " + event.orientation + " mode!" );
+      switch(event.orientation) {
+        case "portrait":
+          $("#locations").removeClass("landscaped");
+          $(".bottommenu").css("top","996px");
+          $(".pageslogo").css("top","120px");
+          $(".pagetitle").css("top","113px");
+          break;
+        case "landscape":
+          $("#locations").addClass("landscaped");
+          $(".bottommenu").css("top","740px");
+          $(".pageslogo").css("top","170px");
+          $(".pagetitle").css("top","130px");
+          break;
+      }
+    });
+  </script>
+</div>

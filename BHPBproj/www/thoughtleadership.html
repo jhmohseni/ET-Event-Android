@@ -1,0 +1,240 @@
+<!-- i-C-a -->
+<div data-role="page" id="thoughtleadership" class="succeedingpage">
+  <script src="js/functions.js"></script>
+  
+  <div class="pageslogo"></div>
+  <div class="pagetitle">
+    <br>
+    <h2>Thought Leadership</h2>
+  </div>
+  <div class="backtomaterials"></div>
+  <div class="vspacer-line" style="margin: 10px 0;"></div>
+  <!--<div class="buttonscontainer">
+    <div class="perdaybtns" id="thlday1btn"></div>
+    <div class="perdaybtns" id="thlday2btn"></div>
+    <div class="perdaybtns" id="thlday3btn"></div>
+    <div class="perdaybtns" id="thlday4btn"></div>
+  </div>-->
+  
+  <div class="contentholder">
+    <div class="thldaycontainer">
+       <ul data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+        <li class="ui-first-child"><a id="tl-bhpbilliton" href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r thlead"><img src="css/images/bhpbilliton.png"><br>BHPB Billiton Quarterly Briefing: Q1 2014</a></li>
+        <li class="ui-li-has-count"><a id="tl-effectivecapital" href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r thlead"><img src="css/images/effectivecapital.png"><br><span>Effective Capital Project Execution</span></a></li>
+        <li class="ui-li-has-count"><a id="tl-eyigniting" href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r thlead"><img src="css/images/eyigniting.png"><br><span>Igniting Innovation</span></a></li>
+        <li class="ui-li-has-count"><a id="tl-changemanagement" href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r tl-vid"><img src="css/images/changemanagement.png"><br><span>Change Management</span></a></li>
+        <li class="ui-li-has-count"><a id="tl-gamechanging" href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r thlead"><img src="css/images/gamechange.png"><br><span>Game-Changing Trends in Supply Chain</span></a></li>
+        <li class="ui-li-has-count"><a id="tl-alltied" href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r thlead"><img src="css/images/alltied.png"><br><span>All Tied Up: Working Capital Management Report 2013</span></a></li>
+        <li class="ui-li-has-count"><a id="tl-mandmcyber" href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r thlead"><img src="css/images/mandmcyber.png"><br><span>Cyber Hacking &amp; Information Security</span></a></li>
+        <li class="ui-li-has-count"><a id="tl-mininginrapid" href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r thlead"><img src="css/images/mininginrapid.png"><br><span>Mining in Rapid Growth Economies</span></a></li>
+        <li class="ui-last-child"><a id="tl-capitalbriefing" href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r thlead"><img src="css/images/capitalbriefing.png"><br><span>Capital Briefing (Feb 14)</span></a></li>
+        <li class="ui-last-child"><a id="tl-busrisk" href="#" class="ui-btn ui-btn-icon-right ui-icon-carat-r thlead"><img src="css/images/busrisk.png"><br><span>Business Risks Facing Mining & Metals - 2013</span></a></li>
+      </ul>
+    </div>
+  </div><!--end of contentholder-->
+  
+  <div data-role="popup"  id="thleadvid" data-position-to="window" data-overlay-theme="a" 
+      style="text-align:center;width:320px;height:240px;background:#000000;">
+    <video controls name="media" width="320" height="240" id="chmvid">
+      <!--<source src="vid/changemanagement.mp4" type="video/mp4">-->
+      <source src="https://dmkessiapqw4p.cloudfront.net/eytouring/forandroid/video/changemanagement.mp4" type="video/mp4">
+    </video>
+  </div>
+  
+  <div class="bottommenu">
+    <div class="homebtn"></div>
+    <div class="menubtnscontainer">
+      <div class="bottomicons" id="menuday1"><img src="css/images/day1icn.png"><br>Day 1</div>
+      <div class="bottomicons" id="menuday2"><img src="css/images/day2icn.png"><br>Day 2</div>
+      <div class="bottomicons" id="menuday3"><img src="css/images/day3icn.png"><br>Day 3</div>
+      <div class="bottomicons" id="menuday4"><img src="css/images/day4icn.png"><br>Day 4</div>
+      <div class="bottomicons" id="menumaterials"><img src="css/images/homeicn.png"><br>Home</div>
+    </div>
+  </div>
+  
+  <div data-role="popup"  class="singleDownload" data-dismissible="false" data-position-to="window" data-overlay-theme="a" 
+      style="text-align:center;width:300px;height:120px;background:#FFFFFF;padding-top:40px;">
+    <img src="css/images/loadingImg.gif"><br>
+    Downloading File
+  </div>
+  
+  <script>
+    $("#thoughtleadership").on("pageshow", function(event) {
+      $(".singleDownload").popup();
+      $("#thleadvid").popup();
+      
+      if(window.innerHeight > window.innerWidth) {
+        $("#thoughtleadership").removeClass("landscaped");
+        $(".bottommenu").css("top","996px");
+        $(".pageslogo").css("top","120px");
+        $(".pagetitle").css("top","113px");
+        $(".backtomaterials").css("top","40px");
+        $(".thldaycontainer").css("height","710px");
+      } else {
+        $("#thoughtleadership").addClass("landscaped");
+        $(".bottommenu").css("top","740px");
+        $(".pageslogo").css("top","170px");
+        $(".pagetitle").css("top","130px");
+        $(".backtomaterials").css("top","80px");
+        $(".thldaycontainer").css("height","460px");
+      }
+    });
+    
+    $( "#thleadvid" ).popup({
+      afterclose: function( event, ui ) {
+        //alert("ang arka nasiradu na");
+        chmvid.pause();
+      }
+    });
+    
+    $(".tl-vid").on('tap', function() {
+      event.stopPropagation();
+      $(this).removeClass("tl-vid");
+      $("#thleadvid").popup("open");
+      chmvid.play();
+      setTimeout(function() {
+          $(this).addClass("tl-vid");
+        }, 1000);
+      return false;
+    });
+    
+    $(".thlead").on('tap', function() {
+      event.stopPropagation();
+      $(this).removeClass("thlead");
+      var tlId = $(this).attr("id");
+      switch(tlId) {
+        case "tl-bhpbilliton":
+          var tlURL = window.localStorage.getItem("fileaddressoftl-bhpbilliton");
+          if(tlURL == null) {
+            downloadFile("tl-bhpbilliton", "thoughtleadership");
+          } else {
+            window.open(tlURL, "toolbar=yes", "EnableViewPortScale=yes", '_system');
+          }
+          break;
+        case "tl-gamechanging":
+          var tlURL = window.localStorage.getItem("fileaddressoftl-gamechanging");
+          if(tlURL == null) {
+            downloadFile("tl-gamechanging", "thoughtleadership");
+          } else {
+            window.open(tlURL, "toolbar=yes", "EnableViewPortScale=yes", '_system');
+          }
+          break;
+        case "tl-capitalbriefing":
+          var tlURL = window.localStorage.getItem("fileaddressoftl-capitalbriefing");
+          if(tlURL == null) {
+            downloadFile("tl-capitalbriefing", "thoughtleadership");
+          } else {
+            window.open(tlURL, "toolbar=yes", "EnableViewPortScale=yes", '_system');
+          }
+          break;
+        case "tl-businessrisk":
+          var tlURL = window.localStorage.getItem("fileaddressoftl-businessrisk");
+          if(tlURL == null) {
+            downloadFile("tl-businessrisk", "thoughtleadership");
+          } else {
+            window.open(tlURL, "toolbar=yes", "EnableViewPortScale=yes", '_system');
+          }
+          break;
+        case "tl-capitalconfidence":
+          var tlURL = window.localStorage.getItem("fileaddressoftl-capitalconfidence");
+          if(tlURL == null) {
+            downloadFile("tl-capitalconfidence", "thoughtleadership");
+          } else {
+            window.open(tlURL, "toolbar=yes", "EnableViewPortScale=yes", '_system');
+          }
+          break;
+        case "tl-effectivecapital":
+          var tlURL = window.localStorage.getItem("fileaddressoftl-effectivecapital");
+          if(tlURL == null) {
+            downloadFile("tl-effectivecapital", "thoughtleadership");
+          } else {
+            window.open(tlURL, "toolbar=yes", "EnableViewPortScale=yes", '_system');
+          }
+          break;
+        case "tl-alltied":
+          var tlURL = window.localStorage.getItem("fileaddressoftl-alltied");
+          if(tlURL == null) {
+            downloadFile("tl-alltied", "thoughtleadership");
+          } else {
+            window.open(tlURL, "toolbar=yes", "EnableViewPortScale=yes", '_system');
+          }
+          break;
+        case "tl-mandmcyber":
+          var tlURL = window.localStorage.getItem("fileaddressoftl-mandmcyber");
+          if(tlURL == null) {
+            downloadFile("tl-mandmcyber", "thoughtleadership");
+          } else {
+            window.open(tlURL, "toolbar=yes", "EnableViewPortScale=yes", '_system');
+          }
+          break;
+        case "tl-mergers":
+          var tlURL = window.localStorage.getItem("fileaddressoftl-mergers");
+          if(tlURL == null) {
+            downloadFile("tl-mergers", "thoughtleadership");
+          } else {
+            window.open(tlURL, "toolbar=yes", "EnableViewPortScale=yes", '_system');
+          }
+          break;
+        case "tl-gamechanging":
+          var tlURL = window.localStorage.getItem("fileaddressoftl-gamechanging");
+          if(tlURL == null) {
+            downloadFile("tl-gamechanging", "thoughtleadership");
+          } else {
+            window.open(tlURL, "toolbar=yes", "EnableViewPortScale=yes", '_system');
+          }
+          break;
+        case "tl-eyigniting":
+          var tlURL = window.localStorage.getItem("fileaddressoftl-eyigniting");
+          if(tlURL == null) {
+            downloadFile("tl-eyigniting", "thoughtleadership");
+          } else {
+            window.open(tlURL, "toolbar=yes", "EnableViewPortScale=yes", '_system');
+          }
+          break;
+        case "tl-mininginrapid":
+          var tlURL = window.localStorage.getItem("fileaddressoftl-mininginrapid");
+          if(tlURL == null) {
+            downloadFile("tl-mininginrapid", "thoughtleadership");
+          } else {
+            window.open(tlURL, "toolbar=yes", "EnableViewPortScale=yes", '_system');
+          }
+          break;
+        case "tl-busrisk":
+          var tlURL = window.localStorage.getItem("fileaddressoftl-busrisk");
+          if(tlURL == null) {
+            downloadFile("tl-busrisk", "thoughtleadership");
+          } else {
+            window.open(tlURL, "toolbar=yes", "EnableViewPortScale=yes", '_system');
+          }
+          break;
+      }
+      setTimeout(function() {
+          $(this).addClass("thlead");
+        }, 1000);
+      return false;
+    });
+    
+    $( window ).on( "orientationchange", function( event ) {
+      //navigator.notification.alert( "This device is in " + event.orientation + " mode!" );
+      switch(event.orientation) {
+        case "portrait":
+          $("#thoughtleadership").removeClass("landscaped");
+          $(".bottommenu").css("top","996px");
+          $(".pageslogo").css("top","120px");
+          $(".pagetitle").css("top","113px");
+          $(".backtomaterials").css("top","40px");
+          $(".thldaycontainer").css("height","710px");
+          break;
+        case "landscape":
+          $("#thoughtleadership").addClass("landscaped");
+          $(".bottommenu").css("top","740px");
+          $(".pageslogo").css("top","170px");
+          $(".pagetitle").css("top","130px");
+          $(".backtomaterials").css("top","80px");
+          $(".thldaycontainer").css("height","460px");
+          break;
+      }
+    });
+  </script>
+  
+</div>

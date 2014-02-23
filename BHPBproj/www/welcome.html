@@ -1,0 +1,92 @@
+<!-- i-C-a -->
+<div data-role="page" id="welcomepage" class="succeedingpage">
+  <script src="js/functions.js"></script>
+  
+  <div class="pageslogo"></div>
+  <div class="pagetitle">
+    <h2>Productivity Improvement through<br>Reliability Technology</h2>
+  </div>
+  <div class="backtohome"></div>
+  <div class="vspacer-line" style="margin: 10px 0;"></div>
+  
+  <div class="contentholder">  
+    <div class="welcomecontainer">
+      <!--<h3>Welcome to the BHPBIO study tour</h3>-->
+      <!--<p>
+        Productivity Improvement through Reliability Technology
+      </p>-->
+      <div style="text-align:center;">
+        <video controls name="media" width="320" height="240">
+          <!--<source src="vid/BillFarrellWelcome.mp4" type="video/mp4">-->
+          <source src="https://dmkessiapqw4p.cloudfront.net/eytouring/forandroid/video/BillFarrellWelcome.mp4" type="video/mp4">
+        </video>
+      </div>
+      <p>
+      BHP Billiton has several productivity initiatives underway, vital for achieving a Continuous Improvement (“step-up”) culture and therefore higher productivity. 
+      </p>
+      <p>
+      Reliability Technology (RT) is a systematic, disciplined strategy providing leadership and employee involvement in improving manufacturing throughput, cost and productivity by increasing production system reliability in both current and new operations.  It is the core component of Procter &amp; Gamble's successful productivity program for the last two decades, focused on uptime, delivering operational stability, throughput optimisation, lower operating and maintenance costs, increased safety, and performance predictions.
+      </p>
+      <p>
+      Last year, EY ran a pilot which identified an estimated 0.2-1.6 Mtpa incremental throughput on OHP4.  We applied our detailed RT analytics and performance simulation models, and identified practical ways to improve availability, utilisation, and rates through different operator behaviour.   
+      </p>
+      <p>
+      This study tour will provide you with a first-hand experience on how RT may allow you to progress to a more predictive environment and to make it a competitive differentiator for BHPBIO / the Group as it pursues its productivity agenda.
+      </p>
+    </div>
+    
+  </div>
+  
+  
+  <div class="bottommenu">
+    <div class="homebtn"></div>
+    <div class="menubtnscontainer">
+      <div class="bottomicons" id="menuday1"><img src="css/images/day1icn.png"><br>Day 1</div>
+      <div class="bottomicons" id="menuday2"><img src="css/images/day2icn.png"><br>Day 2</div>
+      <div class="bottomicons" id="menuday3"><img src="css/images/day3icn.png"><br>Day 3</div>
+      <div class="bottomicons" id="menuday4"><img src="css/images/day4icn.png"><br>Day 4</div>
+      <div class="bottomicons" id="menumaterials"><img src="css/images/homeicn.png"><br>Home</div>
+    </div>
+  </div>
+  <script>
+    $("#welcomepage").on("pageshow", function(event) {
+      if(window.innerHeight > window.innerWidth) {
+        $("#welcomepage").removeClass("landscaped");
+        $(".bottommenu").css("top","996px");
+        $(".pageslogo").css("top","120px");
+        $(".pagetitle").css("top","113px");
+        $(".backtohome").css("top","40px");
+        $(".welcomecontainer").css("max-height","710px");
+      } else {
+        $("#welcomepage").addClass("landscaped");
+        $(".bottommenu").css("top","740px");
+        $(".pageslogo").css("top","170px");
+        $(".pagetitle").css("top","130px");
+        $(".backtohome").css("top","80px");
+        $(".welcomecontainer").css("max-height","460px");
+      }
+    });
+    
+    $( window ).on( "orientationchange", function( event ) {
+      //navigator.notification.alert( "This device is in " + event.orientation + " mode!" );
+      switch(event.orientation) {
+        case "portrait":
+          $("#welcomepage").removeClass("landscaped");
+          $(".bottommenu").css("top","996px");
+          $(".pageslogo").css("top","120px");
+          $(".pagetitle").css("top","113px");
+          $(".backtohome").css("top","40px");
+          $(".welcomecontainer").css("max-height","710px");
+          break;
+        case "landscape":
+          $("#welcomepage").addClass("landscaped");
+          $(".bottommenu").css("top","740px");
+          $(".pageslogo").css("top","170px");
+          $(".pagetitle").css("top","130px");
+          $(".backtohome").css("top","80px");
+          $(".welcomecontainer").css("max-height","460px");
+          break;
+      }
+    });
+  </script>
+</div>

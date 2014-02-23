@@ -1,0 +1,94 @@
+<!-- i-C-a -->
+<div data-role="page" id="contacts" class="succeedingpage">
+  <script src="js/functions.js"></script>
+  
+  <div class="pageslogo"></div>
+  <div class="pagetitle">
+    <br>
+    <h2>Key Contacts</h2>
+  </div>
+  <div class="backtohome"></div>
+  <div class="vspacer-line" style="margin: 10px 0;"></div>
+ 
+  <div class="contentholder">
+    <div class="contactscontainer">
+      <div class="contact">
+        <img src="css/images/contactphotoey.png" style="margin-left:10px;" height="60"><span>Kim Etherington</span>
+        <p>
+          Direct: +61 8 9429 2213 | Mobile: +61 406 339 112<br>
+          Email: <a href="mailto:kim.etherington@au.ey.com" class="email">kim.etherington@au.ey.com</a>
+        </p>
+      </div>
+      <div class="contact">
+        <img src="css/images/contactphotoey.png" style="margin-left:10px;" height="60"><span>Darla Schatteman</span>
+        <p>
+          Direct: +1 513 612 1501 | Mobile: +1 866 521 1148<br>
+          Email: <a href="mailto:darla.schatteman@ey.com" class="email">darla.schatteman@ey.com</a>
+        </p>
+      </div>
+      <div class="contact">
+        <img src="css/images/contactphotobhpb.png" style="margin-left:10px;" height="60"><span>Samantha Westcott</span>
+        <p>
+          Direct: +61 8 6321 3174 | Mobile: +61 467 819 957<br>
+          Email: <a href="mailto:sam.westcott@bhpbilliton.com" class="email">sam.westcott@bhpbilliton.com</a>
+        </p>
+      </div>
+      <div class="contact">
+        <img src="css/images/contactphotobhpb.png" style="margin-left:10px;" height="60"><span>Donna Rawlings</span>
+        <p>
+          Direct: +61 8 6321 3159 | Mobile: +61 402 083 730<br>
+          Email: <a href="mailto:donna.rawlings@bhpbilliton.com" class="email">donna.rawlings@bhpbilliton.com</a>
+        </p>
+      </div>
+    </div>
+  </div><!--end of contentholder-->
+  
+  <div class="bottommenu">
+    <div class="homebtn"></div>
+    <div class="menubtnscontainer">
+      <div class="bottomicons" id="menuday1"><img src="css/images/day1icn.png"><br>Day 1</div>
+      <div class="bottomicons" id="menuday2"><img src="css/images/day2icn.png"><br>Day 2</div>
+      <div class="bottomicons" id="menuday3"><img src="css/images/day3icn.png"><br>Day 3</div>
+      <div class="bottomicons" id="menuday4"><img src="css/images/day4icn.png"><br>Day 4</div>
+      <div class="bottomicons" id="menumaterials"><img src="css/images/homeicn.png"><br>Home</div>
+    </div>
+  </div>
+  
+  <script>
+    $("#contacts").on("pageshow", function(event) {
+      if(window.innerHeight > window.innerWidth) {
+        $("#contacts").removeClass("landscaped");
+        $(".bottommenu").css("top","996px");
+        $(".pageslogo").css("top","120px");
+        $(".pagetitle").css("top","113px");
+        $(".contactscontainer").css("height","710px");
+      } else {
+        $("#contacts").addClass("landscaped");
+        $(".bottommenu").css("top","740px");
+        $(".pageslogo").css("top","170px");
+        $(".pagetitle").css("top","130px");
+        $(".contactscontainer").css("height","460px");
+      }
+    });
+    
+    $( window ).on( "orientationchange", function( event ) {
+      //navigator.notification.alert( "This device is in " + event.orientation + " mode!" );
+      switch(event.orientation) {
+        case "portrait":
+          $("#contacts").removeClass("landscaped");
+          $(".bottommenu").css("top","996px");
+          $(".pageslogo").css("top","120px");
+          $(".pagetitle").css("top","113px");
+          $(".contactscontainer").css("height","710px");
+          break;
+        case "landscape":
+          $("#contacts").addClass("landscaped");
+          $(".bottommenu").css("top","740px");
+          $(".pageslogo").css("top","170px");
+          $(".pagetitle").css("top","130px");
+          $(".contactscontainer").css("height","460px");
+          break;
+      }
+    });
+  </script>
+</div>
